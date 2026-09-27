@@ -7,6 +7,7 @@ Numero de cuenta: 20161030363
 
 import math
 
+# Radio medio de la Tierra segun el valor indicado en la guia de la actividad
 RADIO_TIERRA_KM = 6371.0088
 
 
