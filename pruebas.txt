@@ -1,0 +1,76 @@
+CTE-334 - Actividad 01
+Pruebas del programa actividad01.py
+Autor: Gitzy Yissel Andrade Andrade - Cuenta: 20161030363
+
+===========================================================
+CASO A - Tegucigalpa y Comayagua
+===========================================================
+Entrada:
+  Punto A -> Latitud: 14.0723, Longitud: -87.1921 (Tegucigalpa)
+  Punto B -> Latitud: 14.4514, Longitud: -87.6375 (Comayagua)
+
+Salida obtenida:
+----------------------------------------
+RESULTADO DEL ANÁLISIS
+----------------------------------------
+Distancia: 63.882 km
+Dirección: Noroeste
+Clasificación: Distante
+----------------------------------------
+
+Comprobación esperada: Distancia aproximada 63.882 km; Noroeste; Distante -> CUMPLE
+
+===========================================================
+CASO B - Dos coordenadas exactamente iguales
+===========================================================
+Entrada:
+  Punto A -> Latitud: 14.0723, Longitud: -87.1921
+  Punto B -> Latitud: 14.0723, Longitud: -87.1921
+
+Salida obtenida:
+----------------------------------------
+RESULTADO DEL ANÁLISIS
+----------------------------------------
+Distancia: 0.000 km
+Dirección: Misma ubicación
+Clasificación: Muy cercano
+----------------------------------------
+
+Comprobación esperada: 0.000 km; Misma ubicación; Muy cercano -> CUMPLE
+
+===========================================================
+CASO C - Una latitud igual a 97.5 (fuera de rango)
+===========================================================
+Entrada:
+  Punto A -> Latitud: 97.5, Longitud: -87.1921
+  Punto B -> Latitud: 14.1057, Longitud: -87.2048
+
+Salida obtenida:
+ERROR: coordenada fuera del rango geográfico permitido.
+
+Comprobación esperada: Mensaje de coordenada fuera del rango permitido -> CUMPLE
+
+===========================================================
+CASO D - Dos sitios reales de Honduras (caso propio)
+===========================================================
+Entrada:
+  Punto A -> Latitud: 14.0995, Longitud: -87.2063 (Tegucigalpa, Parque Central)
+  Punto B -> Latitud: 15.7597, Longitud: -86.7822 (La Ceiba, Parque Central)
+
+Salida obtenida:
+----------------------------------------
+RESULTADO DEL ANÁLISIS
+----------------------------------------
+Distancia: 190.146 km
+Dirección: Noreste
+Clasificación: Distante
+----------------------------------------
+
+Comprobación esperada: Resultado propio documentado y reproducible -> CUMPLE
+
+===========================================================
+VALORES FRONTERA - clasificar_distancia()
+===========================================================
+clasificar_distancia(1.000)  -> Cercano
+clasificar_distancia(10.000) -> Distancia media
+clasificar_distancia(50.000) -> Distante
